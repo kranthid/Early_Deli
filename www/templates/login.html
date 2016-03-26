@@ -1,0 +1,47 @@
+<ion-view view-title="Login" align-title="left">
+    <ion-content>
+        <div style="width:100%; height:100%; position: absolute; background: url(img/login.jpg) center; background-size: cover;">
+            <div style="width: 100%;height: 100%;background-size: cover;background-color: #000;opacity: 0.8;">
+            </div>
+        </div>
+        <div class="hero no-header flat">
+            <div class="content">
+                <div class="app-icon"></div>
+                <h1>OWLY</h1>
+            </div>
+        </div>
+
+        <div ng-model="showSignup" ng-controller='LoginCtrl'>
+        <!-- Login -->
+        <div ng-show="showSignup">
+            <div class="list">
+                <input placeholder="Username" ng-model="user.email" highlight-color="balanced" type="text"></input>
+                <input placeholder="Password" ng-model="user.password" highlight-color="energized" type="password"></input>
+                <div style="text-align: right; margin: 2%;"><a href="" ng-click="showSignup=false">Not a member? Sing Up</a></div>
+                <div style="text-align: right; margin: 2%;"><a href="" ng-click="">Forgot password?</a></div>
+            </div>
+            <div class="padding">
+                <button ng-click="loginUser(user)" class="button button-full button-assertive ink">Login</button>
+            </div> 
+        </div>
+        <!-- registarion -->
+        <div ng-hide="showSignup">
+            <div class="list">
+                <input placeholder="Username" ng-model="user.name" highlight-color="balanced" type="text"></input>
+                <input placeholder="Mobile Number" ng-model="user.mobile" highlight-color="balanced" type="text"></input>
+                <input placeholder="Email Address" ng-model="user.email" highlight-color="balanced" type="email"></input>
+                <input placeholder="Password" ng-model="user.password" highlight-color="energized" type="password"></input>
+                <div style="text-align: right; margin: 2%;"><a href="" ng-click="showSignup=true">Already a member? Login</a></div>
+            </div>
+            <div class="padding">
+                <button ng-click="signupUser(user)" class="button button-full button-assertive ink">Sign Up</button>
+            </div> 
+        </div>
+        </div>
+        <!-- <div class="button-bar social-login">
+            <button class="button button-small button-border icon-left ion-social-google button-assertive-900">Google+</button>
+            <button class="button button-small button-border icon-left ion-social-twitter button-calm-900">Twitter</button>
+            <button class="button button-small button-border icon-left ion-social-facebook button-positive-900">Facebook</button>
+        </div> -->
+    </ion-content>
+</ion-view>
