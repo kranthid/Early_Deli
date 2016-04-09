@@ -184,6 +184,9 @@ angular.module('starter.controllers', ['ngCart', 'ngCordova'])
         })
     }
     $scope.loginUser = function(userData){
+
+        $state.go('app.main');
+        
         return SignUpIn.loginUser(userData).then(function(res){
             if(res.data.email && res.data.username){
                 localStorage.setItem("username",res.data.username)
