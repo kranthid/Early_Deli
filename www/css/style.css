@@ -108,16 +108,16 @@ p {
 }
 
 .item-divider {
-    background-color: #222;
+    background-color: #163c6a;
     color: #fff;
     font-weight: bold;
 }
 .card {
     border-radius: 4px;
-    background-color: #444;
+    background-color: rgba(22, 60, 106, 0.8);
     box-shadow: none;
     color: #fff;
-    border: 6px solid #222;
+    border: 6px solid #163c6a;
 }
 
 .row input {

@@ -9,27 +9,32 @@ angular.module('starter.services', [])
     title: 'Mayuri',
     lastText: '',
     imageUrl: 'img/bonda.png',
-    
+    tag:"Multicusine restaurant"
+
   }, {
     id: 1,
     title: 'Murali Krishna',
     lastText: '',
-    imageUrl: 'img/dosa.png'
+    imageUrl: 'img/dosa.png',
+    tag:"70mm A/C"
   }, {
     id: 2,
     title: 'Nirvana',
     lastText: '',
-    imageUrl: 'img/chapati.png'
+    imageUrl: 'img/chapati.png',
+    tag:"delicious taste"
   }, {
     id: 3,
     title: 'Celebrations',
     lastText: '',
-    imageUrl: 'img/puri.png'
+    imageUrl: 'img/puri.png',
+    tag:"taste"
   }, {
     id: 4,
     title: 'A2B',
     lastText: '',
-    imageUrl: 'img/juice.png'
+    imageUrl: 'img/juice.png',
+    tag:"Pure vegetarian"
   }];
   
   return {
