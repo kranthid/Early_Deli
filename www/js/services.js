@@ -1,5 +1,50 @@
 angular.module('starter.services', [])
 
+.factory('Hotels',['$http','$q', function($http,$q) {
+  // Might use a resource here that returns a JSON array
+
+  // Some fake testing data
+  var hotels = [{
+    id: 0,
+    title: 'Mayuri',
+    lastText: '',
+    imageUrl: 'img/bonda.png',
+    
+  }, {
+    id: 1,
+    title: 'Murali Krishna',
+    lastText: '',
+    imageUrl: 'img/dosa.png'
+  }, {
+    id: 2,
+    title: 'Nirvana',
+    lastText: '',
+    imageUrl: 'img/chapati.png'
+  }, {
+    id: 3,
+    title: 'Celebrations',
+    lastText: '',
+    imageUrl: 'img/puri.png'
+  }, {
+    id: 4,
+    title: 'A2B',
+    lastText: '',
+    imageUrl: 'img/juice.png'
+  }];
+  
+  return {
+    all: function() {
+      return hotels;
+      /*return $http.get('http://localhost:8080/api/categories').success(function(retData){
+        console.log("Getting categories response >>>",retData);
+        return retData;
+      }).error(function(err){
+        console.log("Some thing went wrong >>>",err);
+        return [];
+      });*/
+    }
+  };
+}])
 .factory('Menu',['$http','$q', function($http,$q) {
   // Might use a resource here that returns a JSON array
 
@@ -35,7 +80,7 @@ angular.module('starter.services', [])
     lastText: '',
     imageUrl: 'img/bonda.png',
     tag:"Serve with delicious taste",
-    transitionTo:'menu'
+    transitionTo:'hotels'
   }, {
     title: 'Groceries',
     lastText: '',

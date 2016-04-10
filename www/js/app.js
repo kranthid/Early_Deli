@@ -75,20 +75,22 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         templateUrl: 'templates/feedback.html'
     })
 
+    .state('app.hotels', {
+        url: '/hotels',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/hotels-list.html',
+                controller: 'HotelCtrl'
+            }
+        }
+    })
+
     .state('app.menu', {
         url: '/menu',
         views: {
             'menuContent': {
                 templateUrl: 'templates/food-menu.html',
                 controller: 'MenuCtrl'
-            },
-            'fabContent': {
-                template: '<button id="fab-friends" class="button button-fab button-fab-top-left expanded button-energized-900 spin"><i class="icon ion-chatbubbles"></i></button>',
-                controller: function ($timeout) {
-                    $timeout(function () {
-                        document.getElementById('fab-friends').classList.toggle('on');
-                    }, 900);
-                }
             }
         }
     })
@@ -98,14 +100,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
             'menuContent': {
                 templateUrl: 'templates/main-menu.html',
                 controller: 'MainMenuCtrl'
-            },
-            'fabContent': {
-                template: '<button id="fab-friends" class="button button-fab button-fab-top-left expanded button-energized-900 spin"><i class="icon ion-chatbubbles"></i></button>',
-                controller: function ($timeout) {
-                    $timeout(function () {
-                        document.getElementById('fab-friends').classList.toggle('on');
-                    }, 900);
-                }
             }
         }
     })

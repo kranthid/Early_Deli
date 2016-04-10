@@ -205,6 +205,32 @@ angular.module('starter.controllers', ['ngCart', 'ngCordova'])
     ionicMaterialInk.displayEffect();
 })
 
+.controller('HotelCtrl', function($scope, $stateParams, $timeout, Hotels, ionicMaterialInk, ionicMaterialMotion) {
+    // Set Header
+    $scope.$parent.showHeader();
+    $scope.$parent.clearFabs();
+    $scope.$parent.setHeaderFab('left');
+    //get Menu list
+    $scope.hotels = Hotels.all();
+    /*Menu.all().then(function(res){
+        $scope.menu = res.data
+    },function(err){
+        console.log("err is >>>",err);
+        $scope.menu = [];
+    })*/
+    // Delay expansion
+    $timeout(function() {
+        $scope.isExpanded = true;
+        $scope.$parent.setExpanded(true);
+    }, 300);
+
+    // Set Motion
+    //ionicMaterialMotion.fadeSlideInRight();
+
+    // Set Ink
+    ionicMaterialInk.displayEffect();
+})
+
 .controller('MenuCtrl', function($scope, $stateParams, $timeout, Menu, ionicMaterialInk, ionicMaterialMotion) {
     // Set Header
     $scope.$parent.showHeader();
